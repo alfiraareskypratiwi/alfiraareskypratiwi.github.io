@@ -2,34 +2,212 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fasilitas - Website Sekolah</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #8B0000;        /* Dark Red */
+      --primary-dark: #B71C1C;   /* Red 900 */
+      --background: #FAFAFA;     /* Off White */
+      --text: #212121;           /* Charcoal Black */
+      --secondary-bg: #F5F5F5;   /* Light Gray */
+      --accent: #FFD54F;         /* Soft Gold */
+    }
+
+    body {
+      background-color: var(--background);
+      color: var(--text);
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: var(--primary);
+    }
+
+    .navbar a {
+      color: white !important;
+      font-weight: 500;
+    }
+
+    .navbar a:hover {
+      color: var(--accent) !important;
+    }
+
+    h1 {
+      color: var(--primary);
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .facility-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .facility-item {
+      background-color: var(--secondary-bg);
+      border: 1px solid #E0E0E0;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .facility-item img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    /* Form Kritik & Saran */
+    .form-section {
+      background-color: var(--secondary-bg);
+      padding: 30px;
+      margin: 40px auto;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .btn-primary {
+      background-color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--primary-dark);
+      border-color: var(--primary-dark);
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: var(--primary);
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Fasilitas Sekolah</h1>
 
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="kontak.html">Kontak</a>
-  <a href="profile.html">Profil</a>
-  <a href="fasilitas.html">Fasilitas</a>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Sekolah Kita</a>
+      <div>
+        <a class="nav-link d-inline-block mx-2" href="index.html">Home</a>
+        <a class="nav-link d-inline-block mx-2" href="about.html">About Us</a>
+        <a class="nav-link d-inline-block mx-2" href="kontak.html">Kontak</a>
+        <a class="nav-link d-inline-block mx-2" href="profile.html">Profil</a>
+        <a class="nav-link d-inline-block mx-2" href="fasilitas.html">Fasilitas</a>
+      </div>
+    </div>
+  </nav>
 
-  <ul>
-    <li>Ruang Kelas</li>
-        <img src="ruang kelas.jpg" alt="Ruang Kelas" width="400">
-    <li>Kantor</li>
-        <img src="kantor.jpg" alt="Kantor" width="400">
-    <li>Laboratorium Komputer</li>
-        <img src="lab komputer.jpg" alt="Laboratorium Komputer" width="400">
-    <li>Perpustakaan</li>
-        <img src="perpustakaan.jpg" alt="Perpustakaan" width="400">
-    <li>Lapangan Olahraga</li>
-        <img src="lapangan.jpg" alt="Lapangan Olahraga" width="400">
-    <li>Kantin</li>
-        <img src="kantin.jpg" alt="Kantin" width="400">
-    <li>Parkiran</li>
-        <img src="parkiran.jpg" alt="Parkiran" width="400">
-    <li>Masjid</li>
-        <img src="masjid.jpg" alt="Masjid" width="400">
-  </ul>
+  <div class="container">
+    <h1>Fasilitas Sekolah</h1>
+
+    <ul class="facility-list">
+      <li class="facility-item">
+        <h4>Ruang Kelas</h4>
+        <img src="ruang kelas.jpg" alt="Ruang Kelas">
+      </li>
+
+      <li class="facility-item">
+        <h4>Kantor</h4>
+        <img src="kantor.jpg" alt="Kantor">
+      </li>
+
+      <li class="facility-item">
+        <h4>Laboratorium Komputer</h4>
+        <img src="lab komputer.jpg" alt="Laboratorium Komputer">
+      </li>
+
+      <li class="facility-item">
+        <h4>Perpustakaan</h4>
+        <img src="perpustakaan.jpg" alt="Perpustakaan">
+      </li>
+
+      <li class="facility-item">
+        <h4>Lapangan Olahraga</h4>
+        <img src="lapangan.jpg" alt="Lapangan Olahraga">
+      </li>
+
+      <li class="facility-item">
+        <h4>Kantin</h4>
+        <img src="kantin.jpg" alt="Kantin">
+      </li>
+
+      <li class="facility-item">
+        <h4>Parkiran</h4>
+        <img src="parkiran.jpg" alt="Parkiran">
+      </li>
+
+      <li class="facility-item">
+        <h4>Masjid</h4>
+        <img src="masjid.jpg" alt="Masjid">
+      </li>
+    </ul>
+
+    <section class="form-section">
+      <h3 class="text-center mb-3" style="color: var(--primary);">Form Kritik & Saran</h3>
+      <form id="feedbackForm">
+        <div class="mb-3">
+          <label for="nama" class="form-label">Nama Lengkap</label>
+          <input type="text" class="form-control" id="nama" placeholder="Masukkan nama Anda">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" placeholder="Masukkan email aktif">
+        </div>
+        <div class="mb-3">
+          <label for="pesan" class="form-label">Kritik & Saran</label>
+          <textarea class="form-control" id="pesan" rows="4" placeholder="Tuliskan kritik dan saran Anda"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Kirim</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <p>© 2025 Website Sekolah Kita | Dibuat oleh Kelompok Alfira Resky Pratiwi</p>
+    <a href="https://github.com/teman-github" target="_blank" style="color:#FFD54F;">🌐 Collaboration on GitHub</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nama = document.getElementById('nama').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const pesan = document.getElementById('pesan').value.trim();
+
+      if (nama === '' || email === '' || pesan === '') {
+        alert('⚠️ Semua kolom harus diisi!');
+        return;
+      }
+
+      const emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('❌ Format email tidak valid!');
+        return;
+      }
+
+      alert('✅ Terima kasih atas kritik dan sarannya, ' + nama + '!');
+      document.getElementById('feedbackForm').reset();
+    });
+  </script>
+
 </body>
 </html>
