@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Pribadi - Melda</title>
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f4f7f4;
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      background-color: #88a48c; /* sage hijau */
+    }
+    .navbar-brand, .nav-link {
+      color: #fff !important;
+      font-weight: 600;
+    }
+    .nav-link:hover {
+      color: #e9f0ea !important;
+    }
+    header {
+      background: linear-gradient(to right, #88a48c, #a6c1a6);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+    header img {
+      border: 5px solid #fff;
+    }
+    section {
+      background: #fff;
+      border-radius: 15px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 15px rgba(0,0,0,.1);
+    }
+    section h2 {
+      color: #88a48c;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    footer {
+      background: #88a48c;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px 10px 0 0;
+      margin-top: 40px;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+      transition: transform 0.3s ease-in-out;
+    }
+    table tbody tr:hover {
+      background-color: #e9f0ea;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-in-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Melda</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#info">Biodata</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pengalaman">Pengalaman</a></li>
+          <li class="nav-item"><a class="nav-link" href="#matkul">Mata Kuliah</a></li>
+          <li class="nav-item"><a class="nav-link" href="#dosen">Dosen</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kelompok">Kelompok</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="mt-5 pt-5">
+    <img src="foto melda.jpg" alt="Foto Melda" class="rounded-circle shadow-lg mb-3" width="180">
+    <h1 class="fw-bold">Pengenalan Diri</h1>
+  </header>
+
+  <main class="container my-5">
+
+    <section id="info" class="fade-in">
+      <p><strong>Nama:</strong> <b> Melda Auliyah Zakina</b></p>
+      <p><strong>NIM:</strong> <i>240209500059</i></p>
+      <p><strong>Kelas:</strong> <u>PTIK C</u></p>
+      <p><strong>Alamat saat ini:</strong> BTN Tabaria Baru Blok W No.3</p>
+      <p><strong>Alamat lama:</strong> <del>Kabupaten Wajo</del></p>
+      <p><strong>Asal Sekolah:</strong> UPT SMAN 7 WAJO</p>
+      <p><strong>Motto:</strong></p>
+      <pre>
+Bekerja keras, berdoa, dan terus belajar.
+Jadilah versi terbaik dari dirimu setiap hari.
+      </pre>
+    </section>
+
+    <section id="pengalaman" class="fade-in">
+      <h2>Pengalaman Saya</h2>
+      <p>
+        Selama mengikuti perkuliahan di PTIK, saya banyak belajar tentang dasar-dasar teknologi informasi dan komunikasi,
+        mulai dari pemrograman dasar, jaringan komputer, hingga etika penggunaan teknologi.
+      </p>
+      <p>
+        Selain itu, pengalaman organisasi dan kerja kelompok juga sangat berharga. Saya belajar keterampilan manajemen waktu,
+        komunikasi antaranggota tim, serta cara mempresentasikan hasil kerja dengan jelas.
+      </p>
+    </section>
+
+    <section id="matkul" class="fade-in">
+      <h2>Daftar Mata Kuliah Favorit </h2>
+      <ol>
+        <li>Kecerdasan Buatan</li>
+        <li>Pemrograman Web</li>
+        <li>Komunikasi Data</li>
+        <li>Basis Data</li>
+        <li>Keamanan Komputer</li>
+      </ol>
+    </section>
+
+    <section id="dosen" class="fade-in">
+      <h2>Daftar Dosen (tidak terurut)</h2>
+      <ul>
+        <li>Haekal Febriansyah Ramadhan, S.T.,M.Pd</li>
+        <li>Dr. Eng. Muhammad Ayat Hidayat, S.T., M.T</li>
+        <li>Muhammad Fadlirrahman Baso S.Pd., M.Pd</li>
+        <li>Ir. Rahmaniar, S.Kom.,M.Kom</li>
+        <li>Alifya NFH, S.Pd.,M.Pd</li>
+      </ul>
+    </section>
+
+    <section id="kelompok" class="fade-in">
+      <h2>Data Teman Satu Kelompok MK Pemrograman Web</h2>
+      <div class="table-responsive">
+        <table class="table table-bordered table-hover align-middle">
+          <thead class="table-success text-center">
+            <tr>
+              <th rowspan="2">No</th>
+              <th colspan="2">Nama</th>
+              <th rowspan="2">Jenis Kelamin</th>
+              <th rowspan="2">Alamat</th>
+              <th rowspan="2">Asal Sekolah</th>
+            </tr>
+            <tr>
+              <th>Lengkap</th>
+              <th>Panggilan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Nabilah Auliah Rahman</td>
+              <td>Ila</td>
+              <td>Perempuan</td>
+              <td>Dg.Tata</td>
+              <td>SMA Negeri 7 Wajo</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Rizki Anhar</td>
+              <td>Kiki</td>
+              <td>Perempuan</td>
+              <td>Gowa, Perumtek Unhas</td>
+              <td>SMA Negeri 9 Sinjai</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Adelia Rahmadhani Tahir</td>
+              <td>Adel</td>
+              <td>Perempuan</td>
+              <td>Jln.Sultan Alauddin</td>
+              <td>SMA Negeri 1 Enrekang</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Blog Pribadi Melda</p>
+  </footer>
+
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Efek sederhana fade-in saat scroll
+    const sections = document.querySelectorAll('.fade-in');
+    const showOnScroll = () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 80) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', showOnScroll);
+    window.addEventListener('load', showOnScroll);
+  </script>
+</body>
+</html>

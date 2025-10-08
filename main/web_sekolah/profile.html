@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Profil - Website Sekolah</title>
+
+  <!-- Bootstrap -->
+ <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+ <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- SweetAlert -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+  <style>
+    :root {
+      --primary: #8B0000;
+      --secondary: #B71C1C;
+      --background: #FAFAFA;
+      --text: #212121;
+      --card-bg: #F5F5F5;
+      --accent: #FFD54F;
+    }
+    body {
+      background-color: var(--background);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+    .navbar {
+      background-color: var(--primary);
+      transition: all 0.3s ease;
+    }
+    .navbar.shrink {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      background-color: var(--secondary);
+    }
+    .navbar a { color: white !important; }
+    .navbar a:hover { color: var(--accent) !important; }
+    h1, h2 { color: var(--primary); }
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid #E0E0E0;
+      transition: transform .3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .btn-primary {
+      background-color: var(--primary);
+      border: none;
+    }
+    .btn-primary:hover {
+      background-color: var(--secondary);
+    }
+    footer {
+      background-color: var(--primary);
+      color: white;
+    }
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      display: none;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 12px;
+      font-size: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    #scrollTopBtn:hover { background-color: var(--secondary); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">SMKN 10 Makassar</a>
+    <button class="navbar-toggler" 
+            type="button" 
+            data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" 
+            aria-controls="navbarNav" 
+            aria-expanded="false" 
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active" href="profile.html">Profil</a></li>
+        <li class="nav-item"><a class="nav-link" href="fasilitas.html">Fasilitas</a></li>
+        <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<style>
+.navbar-toggler {
+  position: relative;
+  z-index: 1055;
+}
+</style>
+
+  <!-- HERO -->
+  <section class="py-5 text-center mt-5">
+    <div class="container animate__animated animate__fadeInDown">
+      <h1 class="fw-bold display-5">Profil Sekolah</h1>
+      <p class="lead">Menyiapkan SDM terampil, berkarakter, dan berdaya saing tinggi berlandaskan IMTAQ dan IPTEK.</p>
+    </div>
+  </section>
+
+  <!-- VISI & MISI -->
+  <section class="container py-4">
+    <div class="row g-4">
+      <div class="col-lg-6 animate__animated animate__fadeInLeft">
+        <div class="card p-4">
+          <h2><i class="fa-solid fa-eye"></i> Visi</h2>
+          <p>Menyiapkan Sumber Daya Manusia yang terampil, berkarakter, dan berdaya saing berlandaskan IMTAQ dan IPTEK.</p>
+        </div>
+      </div>
+      <div class="col-lg-6 animate__animated animate__fadeInRight">
+        <div class="card p-4">
+          <h2><i class="fa-solid fa-bullseye"></i> Misi</h2>
+          <ol>
+            <li>Iklim belajar berkarakter pada norma dan budaya bangsa.</li>
+            <li>Pendidikan dan latihan berwawasan mutu dan keunggulan.</li>
+            <li>Mencetak tamatan kolaboratif, adaptif, komunikatif, dan mandiri.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STRUKTUR ORGANISASI -->
+<!-- Struktur Organisasi -->
+<section id="struktur" class="py-5 bg-light" style="font-family: 'Poppins', sans-serif;">
+  <div class="container">
+    <h2 class="text-center mb-4 fw-bold" style="color: #8B0000;">Struktur Organisasi Sekolah</h2>
+    <div class="table-responsive shadow rounded-4">
+      <table class="table table-hover table-bordered align-middle">
+        <thead class="text-white text-center" style="background-color: #8B0000;">
+          <tr>
+            <th style="width: 90px;">Foto</th>
+            <th>NIP</th>
+            <th>Nama</th>
+            <th>Jenis Kelamin</th>
+            <th>Jabatan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="text-center">
+              <img src="../web_sekolah/foto/foto_guru/kepsek.jpg" alt="Andi Umar Patta" class="rounded-circle shadow-sm" width="60">
+            </td>
+            <td>1970100519990301012</td>
+            <td class="fw-semibold">ANDI UMAR PATTA, S.Pd., M.Si</td>
+            <td>Laki-Laki</td>
+            <td>KEPALA SEKOLAH</td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <img src="../web_sekolah/foto/foto_guru/bendahara.jpg" alt="Sarah Wulan Sari" class="rounded-circle shadow-sm" width="60">
+            </td>
+            <td>197807042022212021</td>
+            <td class="fw-semibold">SARAH WULAN SARI, S.Pd, S.T</td>
+            <td>Perempuan</td>
+            <td>BENDAHARA</td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <img src="../web_sekolah/foto/foto_guru/wakasek_kurikulum.jpg" alt="Takbir" class="rounded-circle shadow-sm" width="60">
+            </td>
+            <td>196802191993031010</td>
+            <td class="fw-semibold">TAKBIR, S.Pd., M.M</td>
+            <td>Laki-Laki</td>
+            <td>WAKASEK KURIKULUM</td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <img src="../web_sekolah/foto/foto_guru/wakasek_kesiswaan.jpg" alt="Mansyur Asyikin" class="rounded-circle shadow-sm" width="60">
+            </td>
+            <td>196612311995121015</td>
+            <td class="fw-semibold">MANSYUR ASYIKIN, S.Pd., M.M</td>
+            <td>Laki-Laki</td>
+            <td>WAKASEK KESISWAAN</td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <img src="../web_sekolah/foto/foto_guru/wakasek_humas.jpg" alt="Rusdi Palemma" class="rounded-circle shadow-sm" width="60">
+            </td>
+            <td>196702081993031013</td>
+            <td class="fw-semibold">Drs. H. RUSDI PALEMMAI, M.Pd</td>
+            <td>Laki-Laki</td>
+            <td>WAKASEK HUMAS/HUBIN</td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <img src="../web_sekolah/foto/foto_guru/wakasek_sarana.jpg" alt="Syamsul Alam" class="rounded-circle shadow-sm" width="60">
+            </td>
+            <td>196706051995121004</td>
+            <td class="fw-semibold">Drs. SYAMSUL ALAM, M.Pd</td>
+            <td>Laki-Laki</td>
+            <td>WAKASEK SARANA & PRASARANA</td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <img src="../web_sekolah/foto/foto_guru/kaprodi1.jpg" alt="Yudi Yudayani" class="rounded-circle shadow-sm" width="60">
+            </td>
+            <td>197601262011011003</td>
+            <td class="fw-semibold">YUDI YUDAYANI, S.Pd., M.Pd</td>
+            <td>Laki-Laki</td>
+            <td>KA. PROG KEAHLIAN TEK. DESAIN PEMODELAN & INFORMASI</td>
+          </tr>
+          <tr>
+            <td class="text-center">
+              <img src="../web_sekolah/foto/foto_guru/kaprodi2.jpg" alt="Maruf" class="rounded-circle shadow-sm" width="60">
+            </td>
+            <td>197406052006051003</td>
+            <td class="fw-semibold">MARUF, S.Pd</td>
+            <td>Laki-Laki</td>
+            <td>KA. PROG KEAHLIAN TEK. MESIN & LOGAM</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Tambahan CSS -->
+<style>
+  #struktur table {
+    font-size: 15px;
+    color: #212121;
+  }
+  #struktur tbody tr:hover {
+    background-color: #ffeaea;
+    transition: 0.3s;
+  }
+  #struktur th {
+    font-weight: 600;
+    background-color: #8B0000 !important;
+    color: white;
+  }
+  #struktur h2 {
+    font-weight: 700;
+  }
+</style>
+
+<!-- PROGRAM KEAHLIAN -->
+<section class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4 fw-bold" style="color:#8B0000;">Program Keahlian</h2>
+    <div class="row justify-content-center g-3">
+      <div class="col-12 col-md-8 d-flex flex-wrap justify-content-center gap-3">
+        <button class="btn btn-keahlian">Teknik Komputer dan Jaringan</button>
+        <button class="btn btn-keahlian">Teknik Instalasi Tenaga Listrik</button>
+        <button class="btn btn-keahlian">Teknik Pemesinan</button>
+        <button class="btn btn-keahlian">Teknik Pengelasan</button>
+        <button class="btn btn-keahlian">Teknik Kendaraan Ringan</button>
+        <button class="btn btn-keahlian">Desain Permodelan dan Informasi Bangunan</button>
+        <button class="btn btn-keahlian">Teknik dan Bisnis Sepeda Motor</button>
+        <button class="btn btn-keahlian">Teknik Elektronika Industri</button>
+        <button class="btn btn-keahlian">Teknik Audio Video</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tambahkan style CSS -->
+<style>
+  .btn-keahlian {
+    background-color: #8B0000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+
+  .btn-keahlian:hover {
+    background-color: #B71C1C;
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    color: #FFD54F;
+  }
+</style>
+
+<!-- Tambahkan animasi interaktif JS -->
+<script>
+  const buttons = document.querySelectorAll('.btn-keahlian');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.add('animate__animated', 'animate__pulse');
+      setTimeout(() => {
+        btn.classList.remove('animate__animated', 'animate__pulse');
+      }, 800);
+    });
+  });
+</script>
+
+<!-- FOOTER -->
+<footer class="footer py-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <!-- Tentang Kami -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">Tentang Kami</h5>
+        <p>
+          Kami adalah kelompok 3 yang berdedikasi untuk menciptakan solusi inovatif dalam dunia pendidikan.
+        </p>
+      </div>
+
+      <!-- Tautan Cepat -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">Tautan Cepat</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+          <li><a href="profile.html">Profil</a></li>
+          <li><a href="fasilitas.html">Fasilitas</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontak -->
+      <div class="col-md-4 mb-4">
+        <h5 class="footer-title">Kontak</h5>
+        <ul class="list-unstyled footer-contact">
+          <li><i class="fa-solid fa-location-dot me-2"></i> Jl. Pendidikan No. 123, Kota Pendidikan</li>
+          <li><i class="fa-solid fa-phone me-2"></i> (021) 1234-5678</li>
+          <li><i class="fa-solid fa-envelope me-2"></i> info@sekolahkami.sch.id</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-line">
+
+    <div class="text-center mt-3">
+      <small>© 2023 Website Sekolah. All rights reserved.</small>
+    </div>
+  </div>
+</footer>
+
+<!-- Tambahkan CSS -->
+<style>
+  .footer {
+    background-color: #8B0000;
+    color: #FFD54F;
+  }
+
+  .footer-title {
+    font-weight: 600;
+    color: #FFD54F;
+    margin-bottom: 15px;
+  }
+
+  .footer p {
+    color: #fff;
+    font-size: 14px;
+  }
+
+  .footer-links li a {
+    color: #FFFFFF;
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px 0;
+    transition: all 0.3s ease;
+  }
+
+  .footer-links li a:hover {
+    color: #FFD54F;
+    padding-left: 5px;
+  }
+
+  .footer-contact li {
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .footer-contact i {
+    color: #FFD54F;
+  }
+
+  .footer-line {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 15px;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      text-align: center;
+    }
+    .footer-links, .footer-contact {
+      padding-left: 0;
+    }
+  }
+</style>
+
+<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
