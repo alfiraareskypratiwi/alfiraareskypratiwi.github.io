@@ -2,28 +2,238 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontak - Website Sekolah</title>
+
+  <!-- Bootstrap lokal (grid only) -->
+  <link href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap-grid.min.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #ffffff;
+      color: #212121;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      background-color: #8B0000;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .navbar a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 10px;
+    }
+    .navbar a:hover {
+      color: #FFD54F;
+    }
+    .navbar-toggler {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .navbar-toggler span {
+      height: 3px;
+      width: 25px;
+      background-color: #ffffff;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+    .navbar-menu {
+      display: flex;
+    }
+    @media (max-width: 768px) {
+      .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #8B0000;
+        margin-top: 10px;
+      }
+      .navbar-menu.show {
+        display: flex;
+      }
+      .navbar-toggler {
+        display: flex;
+      }
+    }
+
+    /* ===== FORM MINIMALIS ===== */
+    .form-container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .input-group {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fafafa;
+      transition: all 0.2s ease;
+    }
+    .input-group:focus-within {
+      border-color: #8B0000;
+      box-shadow: 0 0 4px rgba(139,0,0,0.2);
+      background-color: #fff;
+    }
+    .input-group i {
+      color: #8B0000;
+      margin-left: 12px;
+    }
+    .form-control {
+      border: none;
+      background: none;
+      padding: 12px 14px;
+      width: 100%;
+      outline: none;
+      font-size: 0.95rem;
+    }
+    textarea.form-control {
+      resize: none;
+    }
+    .btn-red {
+      background-color: #8B0000;
+      color: #ffffff;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      width: 100%;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    .btn-red:hover {
+      background-color: #B71C1C;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1 px solid #fffdfd;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #8B0000;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Kontak Sekolah</h1>
-  <hr>
 
-  <a href="index.html">Home</a> 
-  <a href="about.html">About Us</a>
-  <a href="kontak.html">Kontak</a>
-  <a href="profile.html">Profil</a>
-  <a href="fasilitas.html">Fasilitas</a>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="#" class="navbar-brand fw-semibold text-white">SMKN 10 Makassar</a>
+    <div class="navbar-toggler" id="toggler">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="navbar-menu" id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="kontak.html">Kontak</a>
+      <a href="profile.html">Profil</a>
+      <a href="fasilitas.html">Fasilitas</a>
+    </div>
+  </nav>
 
-  <hr>
-  <p>Gmail : smkn10makassar@gmail.com</p>
-  <p>NPSN : 69772517</p>
-  <p>Status : Negeri</p>
-  <p>Bentuk Pendidikan : SMK</p>
-  <p>Status Kepemilikan : Pemerintah Daerah</p>
-  <p>SK Pendirian Sekolah : 2494/X/TAHUN 2010</p>
-  <p>Tanggal SK Pendirian : 2010-10-22</p>
-  <p>SK Izin Operasional : 421.3/1563/DP/III/2014</p>
-  <p>Tanggal SK Izin Operasional : 2014-03-20</p>
-  <p>Alamat: Jl. Pendidikan No. 45, Makassar</p>
+  <!-- Konten -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4" style="color:#8B0000;"><center>Kontak Sekolah</center></h2>
+    <div class="row justify-content-center g-4">
+
+      <!-- Informasi Sekolah -->
+      <div class="col-md-5">
+        <div class="card">
+          <h5 class="mb-3" style="color:#8B0000;">Informasi Sekolah</h5>
+          <p><strong><i class="bi bi-envelope-fill me-2"></i>Gmail:</strong> smkn10makassar@gmail.com</p>
+          <p><strong><i class="bi bi-123 me-2"></i>NPSN:</strong> 69772517</p>
+          <p><strong><i class="bi bi-building-check me-2"></i>Status:</strong> Negeri</p>
+          <p><strong><i class="bi bi-book-half me-2"></i>Bentuk Pendidikan:</strong> SMK</p>
+          <p><strong><i class="bi bi-geo-alt-fill me-2"></i>Alamat:</strong> Jl. Pendidikan No. 45, Makassar</p>
+        </div>
+      </div>
+
+      <!-- Form Kirim Pesan -->
+      <div class="col-md-5">
+        <div class="form-container">
+          <h5 class="text-center mb-4" style="color:#8B0000;">Kirim Pesan</h5>
+          <form id="contactForm">
+            <label for="nama" class="form-label">Nama Lengkap</label>
+            <div class="input-group mb-3">
+              <i class="bi bi-person-fill"></i>
+              <input type="text" id="nama" class="form-control" placeholder="Masukkan nama lengkap anda">
+            </div>
+
+            <label for="email" class="form-label">Alamat Email</label>
+            <div class="input-group mb-3">
+              <i class="bi bi-envelope-fill"></i>
+              <input type="email" id="email" class="form-control" placeholder="Masukkan email aktif">
+            </div>
+
+            <label for="pesan" class="form-label">Pesan Anda</label>
+            <div class="input-group mb-3 align-items-start">
+              <i class="bi bi-chat-dots-fill mt-2"></i>
+              <textarea id="pesan" class="form-control" rows="4" placeholder="Tulis pesan anda di sini..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-red mt-4"><i class="bi bi-send-fill me-2"></i>Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SMKN 10 Makassar. All rights reserved.</p>
+  </footer>
+
+  <!-- Script -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Toggle menu
+    $("#toggler").click(function() {
+      $(this).toggleClass("active");
+      $("#menu").toggleClass("show");
+    });
+
+    // Validasi form
+    $("#contactForm").submit(function(e) {
+      e.preventDefault();
+      const nama = $("#nama").val().trim();
+      const email = $("#email").val().trim();
+      const pesan = $("#pesan").val().trim();
+
+      if (!nama || !email || !pesan) {
+        alert("Semua field harus diisi!");
+        return;
+      }
+      if (!email.includes("@")) {
+        alert("Email tidak valid!");
+        return;
+      }
+      alert("Pesan berhasil dikirim. Terima kasih!");
+      this.reset();
+    });
+  </script>
 </body>
 </html>
