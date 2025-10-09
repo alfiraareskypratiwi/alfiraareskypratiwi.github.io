@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwayat Pendidikan</title>
+  <link href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(135deg, #d8eefe, #fefcff);
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      background: #ffffffcc;
+      border: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 16px;
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .card-header {
+      background: #b8dcff;
+      text-align: center;
+      border-radius: 16px 16px 0 0;
+      font-family: 'Dancing Script', cursive;
+      font-size: 28px;
+      color: #2c3e50;
+    }
+
+    .list-group-item {
+      background-color: #f7fbff;
+      border: none;
+      border-bottom: 1px solid #e3f2fd;
+      transition: 0.3s;
+    }
+
+    .list-group-item:hover {
+      background-color: #e3f2fd;
+      transform: scale(1.02);
+    }
+
+    .btn-home {
+      margin-top: 20px;
+      background-color: #a7d7ff;
+      color: #2c3e50;
+      font-weight: 500;
+      border-radius: 12px;
+      padding: 8px 20px;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .btn-home:hover {
+      background-color: #78c2ff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="card-header">
+      Riwayat Pendidikan
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">TK Aisyah Bustanul Atfal</li>
+      <li class="list-group-item">MI DDI Ugi Baru</li>
+      <li class="list-group-item">MTs As'adiyah Banua Baru</li>
+      <li class="list-group-item">MAN 1 Polewali Mandar</li>
+    </ul>
+  </div>
+
+  <a href="index.html" class="btn-home">Kembali ke Halaman Utama</a>
+
+  <script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Buku Tamu</title>
+  <link href="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #f3f8ff, #c7e3ff);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .navbar {
+      background-color: #a0d8ef;
+    }
+    .navbar-brand {
+      font-weight: 600;
+      color: #ffffff !important;
+    }
+    .form-container {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 50px auto;
+    }
+    h2 {
+      text-align: center;
+      color: #527fb0;
+      font-weight: 600;
+      margin-bottom: 25px;
+    }
+    .btn-submit {
+      background-color: #77cdf0;
+      color: rgb(17, 15, 15);
+      border: none;
+      transition: 0.3s;
+    }
+    .btn-submit:hover {
+      background-color: #77cdf0;
+      color: #ffffff;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: rgb(121, 192, 244);
+      color: #373232;
+      font-size: 0.9rem;
+      margin-top: auto;
+      border-top: 1px solid #ffffff;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+
+  <div class="form-container">
+    <h2>Form Buku Tamu</h2>
+    <form>
+      <div class="mb-3">
+        <label class="form-label">Nama Lengkap</label>
+        <input type="text" class="form-control" placeholder="Masukkan nama lengkap">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Jenis Kelamin</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="jenis_kelamin" value="L" checked>
+          <label class="form-check-label">Laki-laki</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="jenis_kelamin" value="P">
+          <label class="form-check-label">Perempuan</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Alamat Tinggal</label>
+        <input type="text" class="form-control" placeholder="Masukkan alamat">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" placeholder="name@example.com">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Aktif di Sosial Media</label><br>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" value="Facebook">
+          <label class="form-check-label">Facebook</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" value="Twitter">
+          <label class="form-check-label">Twitter</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" value="Instagram">
+          <label class="form-check-label">Instagram</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" value="Tiktok">
+          <label class="form-check-label">Tiktok</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Mengetahui web ini dari</label>
+        <select class="form-select">
+          <option selected>-= Pilih =-</option>
+          <option value="web">Web</option>
+          <option value="surat kabar">Surat Kabar</option>
+          <option value="teman">Teman/Kerabat</option>
+          <option value="browsing">Browsing Internet</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Pesan</label>
+        <textarea class="form-control" rows="3" placeholder="Tulis pesan di sini..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-submit w-100">Kirim</button>
+    </form>
+  </div>
+
+  <footer>
+    © 2025 Buku Tamu by Icha. Semua hak dilindungi.
+  </footer>
+
+  <script src="bootstrap-5.3.8-dist/bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
